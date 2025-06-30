@@ -13,11 +13,11 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
   const [deliveryDropdownOpen, setDeliveryDropdownOpen] = useState(false);
   const [selectedDelivery, setSelectedDelivery] = useState('Select Method');
   const deliveryOptions = ['Door Delivery', 'Pick Up'];
-  const deliveryRef = useRef(null);
+  const deliveryRef = useRef<HTMLDivElement | null>(null);
   const [promoDropdownOpen, setPromoDropdownOpen] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState('Pick discount');
   const promoOptions = ['SAVE10', 'FREESHIP', 'WELCOME5'];
-  const promoRef = useRef(null);
+  const promoRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -34,8 +34,8 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
   }, [deliveryDropdownOpen]);
 
   useEffect(() => {
-    function handleClickOutsidePromo(event) {
-      if (promoRef.current && !promoRef.current.contains(event.target)) {
+    function handleClickOutsidePromo(event: MouseEvent) {
+      if (promoRef.current && !promoRef.current.contains(event.target as Node)) {
         setPromoDropdownOpen(false);
       }
     }
@@ -129,4 +129,4 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
   );
 }
 
-export default CheckoutModal; 
+export default CheckoutModal;
