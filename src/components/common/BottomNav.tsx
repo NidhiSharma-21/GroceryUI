@@ -23,7 +23,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ active, onNavigate }) => {
           onClick={() => onNavigate(item.path)}
         >
           <img src={item.icon} alt={item.label} style={{height: 24, opacity: active === item.label ? 1 : 0.5}} />
-          <span className="text-xs mt-1" style={{color: '#181725', fontWeight: 700}}>{item.label}</span>
+          <span className="text-xs mt-1 font-bold" style={{color: '#181725'}}>{item.label}</span>
         </button>
       ))}
     </nav>

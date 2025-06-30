@@ -20,7 +20,7 @@ interface CartContextType {
   setSearch: (s: string) => void;
 }
 
-const CartContext = createContext(undefined);
+const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const useCart = () => {
   const ctx = useContext(CartContext);
