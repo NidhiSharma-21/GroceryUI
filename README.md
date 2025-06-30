@@ -1,4 +1,4 @@
-# Sofueled Groceries App
+#  Grocery UI
 
 A mobile-first, pixel-perfect online groceries app built with React and React Router DOM. The UI matches the provided Figma design exactly, with reusable components, global state, and smooth navigation.
 
