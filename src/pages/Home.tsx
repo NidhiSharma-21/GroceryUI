@@ -87,7 +87,7 @@ const getSliderSettings = (numCards: number) => ({
 
 const Home = () => {
   const { search, setSearch } = useCart();
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const Home = () => {
   const filterProducts = (list: any[]) =>
     list.filter(p =>
       p.name.toLowerCase().includes(search.toLowerCase()) &&
-      (!selectedCategory || p.name.toLowerCase().includes(selectedCategory.toLowerCase()))
+      (!selectedCategory || p.name.toLowerCase().includes(selectedCategory?.toLowerCase() ?? ""))
     );
 
   // Combine all products for search
