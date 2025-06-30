@@ -62,7 +62,6 @@
 - Font-face is defined in `src/index.css`.
 
 ## Miscellaneous
-- The app is intended for assignment/demo use, not production.
-- All spelling, weights, and product names are corrected to match Figma.
+- All spelling, weights, and product names are corrected .
 - Toast notifications appear at the top-right for cart actions.
 - No automated tests or deployment scripts are included. 
