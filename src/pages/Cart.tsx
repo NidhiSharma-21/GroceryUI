@@ -20,7 +20,7 @@ const Cart = () => {
       {/* Header with Back Icon */}
       <div className="flex items-center justify-center pt-8 pb-4 relative">
         <button onClick={() => navigate(-1)} style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', padding: 0 }}>
-          <img src="/src/assets/back.png" alt="back" style={{ width: 18, height: 18 }} />
+          <img src="/assets/back.png" alt="back" style={{ width: 18, height: 18 }} />
         </button>
         <span className="font-bold text-2xl" style={{ fontFamily: 'Gilroy', color: '#181725' }}>My Cart</span>
       </div>

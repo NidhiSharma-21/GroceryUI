@@ -64,7 +64,7 @@ const CartItem: React.FC<CartItemProps> = ({ id, name, image, price, weight, qua
       </div>
       <div className="flex flex-col items-end justify-center h-full ml-4 min-w-[60px]">
         <button onClick={onRemove} style={{ background: 'none', border: 'none', padding: 0, marginBottom: 8, marginTop: 2 }}>
-                      <img src="/src/assets/cross.png" alt="remove" style={{ width: 24, height: 24, opacity: 0.6 }} />
+                      <img src="/assets/cross.png" alt="remove" style={{ width: 24, height: 24, opacity: 0.6 }} />
         </button>
         <div className="font-bold text-lg mt-2" style={{ color: '#181725', lineHeight: 1.2 }}>${totalPrice}</div>
       </div>

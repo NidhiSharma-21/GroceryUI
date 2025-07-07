@@ -13,7 +13,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChange, placeholder = 'S
       className="flex items-center w-full rounded-2xl px-4"
       style={{ background: '#F2F3F2', height: 56 }}
     >
-              <img src="/src/assets/search.png" alt="search" style={{ width: 24, height: 24, marginRight: 12, opacity: 0.7 }} />
+              <img src="/assets/search.png" alt="search" style={{ width: 24, height: 24, marginRight: 12, opacity: 0.7 }} />
       <input
         type="text"
         value={value}

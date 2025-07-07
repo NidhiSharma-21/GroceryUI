@@ -15,32 +15,32 @@ import "slick-carousel/slick/slick-theme.css";
 import { Toaster, toast } from 'react-hot-toast';
 
 const categories = [
-  { name: 'Pulses', image: '/src/assets/pulses.png', bg: '#F8A44C1A' },
-  { name: 'Rice', image: '/src/assets/rice.png', bg: '#53B1751A' },
-  { name: 'Meat', image: '/src/assets/meat.png', bg: '#F7A5931A' },
+  { name: 'Pulses', image: '/assets/pulses.png', bg: '#F8A44C1A' },
+  { name: 'Rice', image: '/assets/rice.png', bg: '#53B1751A' },
+  { name: 'Meat', image: '/assets/meat.png', bg: '#F7A5931A' },
 ];
 
 const exclusive = [
-  { id: 1, name: 'Organic Bananas', weight: '7pcs, Price', price: 4.99, image: '/src/assets/banana.png' },
-  { id: 2, name: 'Red Apple', weight: '1kg, Price', price: 4.99, image: '/src/assets/apple.png' },
-  { id: 7, name: 'Egg Noodle', weight: '500g, Price', price: 3.49, image: '/src/assets/egg-noodle.png' },
-  { id: 8, name: 'Pepsi', weight: '1.25L, Price', price: 1.99, image: '/src/assets/pepsi.png' },
+  { id: 1, name: 'Organic Bananas', weight: '7pcs, Price', price: 4.99, image: '/assets/banana.png' },
+  { id: 2, name: 'Red Apple', weight: '1kg, Price', price: 4.99, image: '/assets/apple.png' },
+  { id: 7, name: 'Egg Noodle', weight: '500g, Price', price: 3.49, image: '/assets/egg-noodle.png' },
+  { id: 8, name: 'Pepsi', weight: '1.25L, Price', price: 1.99, image: '/assets/pepsi.png' },
 ];
 
 const bestSelling = [
-  { id: 3, name: 'Red Capsicum', weight: '1kg, Price', price: 4.99, image: '/src/assets/redcapsicum.png' },
-  { id: 4, name: 'Ginger', weight: '1kg, Price', price: 4.99, image: '/src/assets/ginger.png' },
-  { id: 9, name: 'Egg Chicken Red', weight: '1kg, Price', price: 5.49, image: '/src/assets/eggchickenred.png' },
-  { id: 10, name: 'Sprite', weight: '1.25L, Price', price: 1.99, image: '/src/assets/sprite.png' },
+  { id: 3, name: 'Red Capsicum', weight: '1kg, Price', price: 4.99, image: '/assets/redcapsicum.png' },
+  { id: 4, name: 'Ginger', weight: '1kg, Price', price: 4.99, image: '/assets/ginger.png' },
+  { id: 9, name: 'Egg Chicken Red', weight: '1kg, Price', price: 5.49, image: '/assets/eggchickenred.png' },
+  { id: 10, name: 'Sprite', weight: '1.25L, Price', price: 1.99, image: '/assets/sprite.png' },
 ];
 
 const groceries = [
-  { id: 5, name: 'Beef Bone', weight: '1kg, Price', price: 4.99, image: '/src/assets/chicken.png' },
-  { id: 6, name: 'Broiler Chicken', weight: '1kg, Price', price: 4.99, image: '/src/assets/meat.png' },
+  { id: 5, name: 'Beef Bone', weight: '1kg, Price', price: 4.99, image: '/assets/chicken.png' },
+  { id: 6, name: 'Broiler Chicken', weight: '1kg, Price', price: 4.99, image: '/assets/meat.png' },
 ];
 
 const banners = [
-  '/src/assets/homebanner.png',
+  '/assets/homebanner.png',
 ];
 
 const sliderSettings = {
@@ -126,9 +126,9 @@ const Home = () => {
     >
       {/* Location and Logo */}
       <div className="flex flex-col items-center pt-6 pb-2 relative">
-        <img src="/src/assets/homecarrot.png" alt="logo" style={{height: 32}} />
+        <img src="/assets/homecarrot.png" alt="logo" style={{height: 32}} />
         <div className="flex items-center gap-1 mt-2">
-          <img src="/src/assets/location.png" alt="location" style={{height: 18}} />
+          <img src="/assets/location.png" alt="location" style={{height: 18}} />
           <span className="text-sm font-semibold" style={{fontFamily: 'Gilroy', color: '#4C4F4D', fontSize: 18, marginTop: 4}}>Dhaka, Banassre</span>
         </div>
       </div>

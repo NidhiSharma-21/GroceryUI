@@ -9,5 +9,14 @@ export default defineConfig({
   },
   watch:{
     include: ['src/**/*.js', 'src/**/*.vue']
+  },
+  base: './',
+  build: {
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   }
 })

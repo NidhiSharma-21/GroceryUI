@@ -9,16 +9,16 @@ import SectionHeader from '../components/common/SectionHeader';
 import Modal from '../components/common/Modal';
 
 const products = [
-  { id: 1, name: 'Organic Bananas', price: 4.99, image: '/src/assets/banana.png', weight: '7pcs, Price', description: 'Bananas are rich in potassium and fiber. They may help prevent asthma, cancer, high blood pressure, diabetes, cardiovascular disease, and digestive problems.', nutrition: 100 },
-  { id: 2, name: 'Red Apple', price: 4.99, image: '/src/assets/apple.png', weight: '1kg, Price', description: 'Apples Are Nutritious. Apples May Be Good For Weight Loss. Apples May Be Good For Your Heart. As Part Of A Healthful And Varied Diet.', nutrition: 100 },
-  { id: 3, name: 'Red Capsicum', price: 4.99, image: '/src/assets/redcapsicum.png', weight: '1kg, Price', description: 'Red capsicum is high in vitamin C and antioxidants. It supports immune health and skin health.', nutrition: 100 },
-  { id: 4, name: 'Ginger', price: 4.99, image: '/src/assets/ginger.png', weight: '1kg, Price', description: 'Ginger is known for its anti-inflammatory and antioxidant effects.', nutrition: 100 },
-  { id: 5, name: 'Beef Bone', price: 4.99, image: '/src/assets/chicken.png', weight: '1kg, Price', description: 'Beef bone is rich in collagen and minerals.', nutrition: 100 },
-  { id: 6, name: 'Broiler Chicken', price: 4.99, image: '/src/assets/meat.png', weight: '1kg, Price', description: 'Broiler chicken is a good source of protein.', nutrition: 100 },
-  { id: 7, name: 'Egg Noodle', price: 3.49, image: '/src/assets/egg-noodle.png', weight: '500g, Price', description: 'Egg noodles are a versatile and delicious base for many dishes.', nutrition: 100 },
-  { id: 8, name: 'Pepsi', price: 1.99, image: '/src/assets/pepsi.png', weight: '1.25L, Price', description: 'Pepsi is a popular carbonated soft drink.', nutrition: 100 },
-  { id: 9, name: 'Egg Chicken Red', price: 5.49, image: '/src/assets/eggchickenred.png', weight: '1kg, Price', description: 'Egg Chicken Red is a protein-rich food item.', nutrition: 100 },
-  { id: 10, name: 'Sprite', price: 1.99, image: '/src/assets/sprite.png', weight: '1.25L, Price', description: 'Sprite is a refreshing lemon-lime flavored soft drink.', nutrition: 100 },
+  { id: 1, name: 'Organic Bananas', price: 4.99, image: '/assets/banana.png', weight: '7pcs, Price', description: 'Bananas are rich in potassium and fiber. They may help prevent asthma, cancer, high blood pressure, diabetes, cardiovascular disease, and digestive problems.', nutrition: 100 },
+  { id: 2, name: 'Red Apple', price: 4.99, image: '/assets/apple.png', weight: '1kg, Price', description: 'Apples Are Nutritious. Apples May Be Good For Weight Loss. Apples May Be Good For Your Heart. As Part Of A Healthful And Varied Diet.', nutrition: 100 },
+  { id: 3, name: 'Red Capsicum', price: 4.99, image: '/assets/redcapsicum.png', weight: '1kg, Price', description: 'Red capsicum is high in vitamin C and antioxidants. It supports immune health and skin health.', nutrition: 100 },
+  { id: 4, name: 'Ginger', price: 4.99, image: '/assets/ginger.png', weight: '1kg, Price', description: 'Ginger is known for its anti-inflammatory and antioxidant effects.', nutrition: 100 },
+  { id: 5, name: 'Beef Bone', price: 4.99, image: '/assets/chicken.png', weight: '1kg, Price', description: 'Beef bone is rich in collagen and minerals.', nutrition: 100 },
+  { id: 6, name: 'Broiler Chicken', price: 4.99, image: '/assets/meat.png', weight: '1kg, Price', description: 'Broiler chicken is a good source of protein.', nutrition: 100 },
+  { id: 7, name: 'Egg Noodle', price: 3.49, image: '/assets/egg-noodle.png', weight: '500g, Price', description: 'Egg noodles are a versatile and delicious base for many dishes.', nutrition: 100 },
+  { id: 8, name: 'Pepsi', price: 1.99, image: '/assets/pepsi.png', weight: '1.25L, Price', description: 'Pepsi is a popular carbonated soft drink.', nutrition: 100 },
+  { id: 9, name: 'Egg Chicken Red', price: 5.49, image: '/assets/eggchickenred.png', weight: '1kg, Price', description: 'Egg Chicken Red is a protein-rich food item.', nutrition: 100 },
+  { id: 10, name: 'Sprite', price: 1.99, image: '/assets/sprite.png', weight: '1.25L, Price', description: 'Sprite is a refreshing lemon-lime flavored soft drink.', nutrition: 100 },
 ];
 
 const ProductDetail = () => {
@@ -55,15 +55,15 @@ const ProductDetail = () => {
         {/* Sticky Top Bar */}
         <div className="sticky top-0 left-0 flex flex-row items-center justify-between w-full px-4 pt-4 mb-2" style={{ zIndex: 10 }}>
           <button onClick={() => navigate(-1)} style={{ background: 'none', border: 'none', padding: 0 }}>
-            <img src="/src/assets/back.png" alt="back" style={{ width: 18, height: 18 }} />
+            <img src="/assets/back.png" alt="back" style={{ width: 18, height: 18 }} />
           </button>
                       <button style={{ background: 'none', border: 'none', padding: 0 }}>
-              <img src="/src/assets/export.png" alt="export" style={{ width: 18, height: 18 }} />
+              <img src="/assets/export.png" alt="export" style={{ width: 18, height: 18 }} />
           </button>
         </div>
         {/* Large Rounded Rectangle Background */}
         <img 
-          src="/src/assets/productImageBg.png" 
+          src="/assets/productImageBg.png" 
           alt="background" 
           className="absolute" 
           style={{ left: '50%', top: 0, transform: 'translateX(-50%)', width: '100vw', maxWidth: 430, height: 371, borderBottomLeftRadius: 40, borderBottomRightRadius: 40, objectFit: 'cover', zIndex: 1, position: 'absolute' }}
@@ -90,7 +90,7 @@ const ProductDetail = () => {
             <Typography variant="body" className="mb-4" color={theme.colors.gray} style={{ fontSize: 18, fontWeight: 500, textAlign: 'left', width: '100%' }}>{product.weight}</Typography>
           </div>
           <div className="flex flex-col items-end justify-start" style={{ minWidth: 32 }}>
-            <img src="/src/assets/favorite.png" alt="favorite" style={{ width: 24, height: 24, marginTop: 4 }} />
+            <img src="/assets/favorite.png" alt="favorite" style={{ width: 24, height: 24, marginTop: 4 }} />
           </div>
         </div>
         {/* Quantity Selector and Price below, price right-aligned below favorite */}
@@ -105,7 +105,7 @@ const ProductDetail = () => {
         <div className="border-t border-b border-[#E2E2E2] py-4 mb-2">
           <button className="flex items-center w-full justify-between" onClick={() => setShowDetail(d => !d)} style={{ background: 'none', border: 'none', padding: 0 }}>
             <Typography variant="h3" style={{ fontWeight: 500 }}>Product Detail</Typography>
-            <img src="/src/assets/downarrow.png" alt="down arrow" style={{ width: 16, height: 16, marginLeft: 8 }} />
+            <img src="/assets/downarrow.png" alt="down arrow" style={{ width: 16, height: 16, marginLeft: 8 }} />
           </button>
           {showDetail && (
             <Typography variant="body" color={theme.colors.gray} className="mt-2" style={{ fontWeight: 500, fontSize: 16 }}>{product.description}</Typography>
@@ -115,7 +115,7 @@ const ProductDetail = () => {
         <div className="flex items-center justify-between py-4 border-b border-[#E2E2E2]">
           <Typography variant="h3" style={{ fontWeight: 500 }}>Nutritions</Typography>
           <div className="bg-[#F2F3F2] rounded-lg px-3 py-1 text-xs ml-auto" style={{ color: theme.colors.gray, fontWeight: 500 }}>{totalNutrition}gr</div>
-                      <img src="/src/assets/rightarrow.png" alt="right arrow" style={{ width: 16, height: 16, marginLeft: 8, cursor: 'pointer' }} onClick={() => setShowNutritionOptions(true)} />
+                      <img src="/assets/rightarrow.png" alt="right arrow" style={{ width: 16, height: 16, marginLeft: 8, cursor: 'pointer' }} onClick={() => setShowNutritionOptions(true)} />
         </div>
         {/* Review */}
         <div className="flex items-center justify-between py-4 border-b border-[#E2E2E2]">
@@ -125,7 +125,7 @@ const ProductDetail = () => {
               <span key={i} style={{ color: '#F3603F', fontSize: 28, fontWeight: 900 }}>★</span>
             ))}
           </div>
-                      <img src="/src/assets/rightarrow.png" alt="right arrow" style={{ width: 16, height: 16, marginLeft: 8 }} />
+                      <img src="/assets/rightarrow.png" alt="right arrow" style={{ width: 16, height: 16, marginLeft: 8 }} />
         </div>
       </div>
       {/* Add to Basket Button */}

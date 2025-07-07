@@ -16,14 +16,14 @@ const Onboarding = () => {
       {/* Background Image */}
       <img
         className="absolute w-full h-full object-cover"
-        src="/src/assets/onboarding.png"
+        src="/assets/onboarding.png"
         alt="Delivery Person"
       />
 
       {/* Overlay content */}
       <div className="relative z-10 h-full flex flex-col justify-end items-center pb-[5vh] px-4 bg-black/30 text-white text-center">
         <div className="mb-4 text-4xl">
-          <img src="/src/assets/carrot.png" alt="carrot" style={{ width: 48, height: 48 }} />
+          <img src="/assets/carrot.png" alt="carrot" style={{ width: 48, height: 48 }} />
         </div>
         <h1 className="text-[48px] leading-tight font-semibold" style={{ fontFamily: 'Gilroy, sans-serif', fontWeight: 600, color: theme.colors.white }}>
           Welcome<br />to our store
