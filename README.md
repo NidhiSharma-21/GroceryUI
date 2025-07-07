@@ -108,5 +108,9 @@ This will scan your codebase and report any issues. Fixing these will help keep 
 - No desktop or tablet support (mobile-only)
 - No deployment scripts (see Vite docs for deployment)
 
+ ## Debugging & Type Error Resolution
+
+This project was developed using the Cursor AI IDE, leveraging AI prompts for debugging and resolving type errors and improving screens user interface.
+
 ## See Also
 - See `assumptions.md` for design and implementation assumptions.
