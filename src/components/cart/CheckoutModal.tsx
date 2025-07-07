@@ -13,11 +13,11 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
   const [deliveryDropdownOpen, setDeliveryDropdownOpen] = useState(false);
   const [selectedDelivery, setSelectedDelivery] = useState('Select Method');
   const deliveryOptions = ['Door Delivery', 'Pick Up'];
-  const deliveryRef = useRef(null);
+  const deliveryRef = useRef<HTMLDivElement | null>(null);
   const [promoDropdownOpen, setPromoDropdownOpen] = useState(false);
   const [selectedPromo, setSelectedPromo] = useState('Pick discount');
   const promoOptions = ['SAVE10', 'FREESHIP', 'WELCOME5'];
-  const promoRef = useRef(null);
+  const promoRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -34,8 +34,8 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
   }, [deliveryDropdownOpen]);
 
   useEffect(() => {
-    function handleClickOutsidePromo(event) {
-      if (promoRef.current && !promoRef.current.contains(event.target)) {
+    function handleClickOutsidePromo(event: MouseEvent) {
+      if (promoRef.current && !promoRef.current.contains(event.target as Node)) {
         setPromoDropdownOpen(false);
       }
     }
@@ -53,7 +53,7 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
       <div className="relative z-50  right-0 bottom-0 w-full max-w-[414px] bg-white rounded-t-3xl p-8 pb-8 animate-slideup" style={{ fontFamily: 'Roboto', minHeight: 520, borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}>
         {/* Close Icon */}
         <button onClick={onClose} className="absolute right-6 top-6" style={{ background: 'none', border: 'none', padding: 0 }}>
-          <img src="/src/assets/cart/cross.png" alt="close" style={{ width: 24, height: 24 }} />
+          <img src="/src/assets/cross.png" alt="close" style={{ width: 24, height: 24 }} />
         </button>
         {/* Title */}
         <div className="font-bold text-2xl mb-6" style={{ color: '#181725' }}>Checkout</div>
@@ -62,7 +62,7 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
           <span className="text-[#7C7C7C] text-base font-semibold">Delivery</span>
           <span className="flex items-center cursor-pointer select-none" onClick={() => setDeliveryDropdownOpen(v => !v)}>
             <span className="text-base font-semibold" style={{ color: '#181725' }}>{selectedDelivery}</span>
-            <img src="/src/assets/productdetail/rightarrow.png" alt="right arrow" style={{ width: 14, height: 14, marginLeft: 4 }} />
+            <img src="/src/assets/rightarrow.png" alt="right arrow" style={{ width: 14, height: 14, marginLeft: 4 }} />
           </span>
           {deliveryDropdownOpen && (
             <div className="absolute right-0 top-full mt-2 w-40 bg-white border rounded-lg shadow-lg z-10" style={{ borderColor: '#E2E2E2' }}>
@@ -82,8 +82,8 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
         <div className="flex items-center justify-between py-4 border-b" style={{ borderColor: '#E2E2E2' }}>
           <span className="text-[#7C7C7C] text-base font-semibold">Payment</span>
           <span className="flex items-center">
-            <img src="/src/assets/cart/card.png" alt="payment" style={{ width: 32, height: 20, marginRight: 8 }} />
-            <img src="/src/assets/productdetail/rightarrow.png" alt="right arrow" style={{ width: 14, height: 14, marginLeft: 0 }} />
+            <img src="/src/assets/card.png" alt="payment" style={{ width: 32, height: 20, marginRight: 8 }} />
+            <img src="/src/assets/rightarrow.png" alt="right arrow" style={{ width: 14, height: 14, marginLeft: 0 }} />
           </span>
         </div>
         {/* Promo Code */}
@@ -91,7 +91,7 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
           <span className="text-[#7C7C7C] text-base font-semibold">Promo Code</span>
           <span className="flex items-center cursor-pointer select-none" onClick={() => setPromoDropdownOpen(v => !v)}>
             <span className="text-base font-semibold" style={{ color: '#181725' }}>{selectedPromo}</span>
-            <img src="/src/assets/productdetail/rightarrow.png" alt="right arrow" style={{ width: 14, height: 14, marginLeft: 4 }} />
+            <img src="/src/assets/rightarrow.png" alt="right arrow" style={{ width: 14, height: 14, marginLeft: 4 }} />
           </span>
           {promoDropdownOpen && (
             <div className="absolute right-0 top-full mt-2 w-40 bg-white border rounded-lg shadow-lg z-10" style={{ borderColor: '#E2E2E2' }}>
@@ -129,4 +129,4 @@ function CheckoutModal({ open, onClose, total, onPlaceOrder }: CheckoutModalProp
   );
 }
 
-export default CheckoutModal; 
+export default CheckoutModal;

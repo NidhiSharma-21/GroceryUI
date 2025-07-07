@@ -11,13 +11,13 @@ const OrderPlaced = () => {
     <div className="min-h-screen flex flex-col items-center justify-start relative overflow-hidden" style={{ fontFamily: 'Roboto', background: '#fff' }}>
       {/* Background image, covers top to just below the text */}
       <img
-        src="/src/assets/orderplaced/Background.png"
+        src="/src/assets/Background.png"
         alt="Background"
         className="absolute left-0 top-0 w-full"
         style={{ height: 380, objectFit: 'cover', zIndex: 0, marginTop: 120 }}
       />
       <div className="flex flex-col items-center w-full relative z-10 pt-20 mt-20">
-        <img src="/src/assets/orderplaced/orderaccepted.png" alt="Order Accepted" style={{ width: 180, height: 180, marginBottom: 32 }} />
+        <img src="/src/assets/orderaccepted.png" alt="Order Accepted" style={{ width: 180, height: 180, marginBottom: 32 }} />
         <h2 className="text-2xl font-bold mb-4 text-center" style={{ color: '#181725' }}>Your Order has been accepted</h2>
         <p className="text-[#7C7C7C] text-base mb-10 text-center" style={{ maxWidth: 320 }}>
           Your items have been placed and are on their way to being processed

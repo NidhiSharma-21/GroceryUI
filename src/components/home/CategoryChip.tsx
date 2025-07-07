@@ -1,6 +1,6 @@
 import React from 'react';
-import theme from '../theme/theme';
-import Typography from './Typography';
+import theme from '../../theme/theme';
+import Typography from '../common/Typography';
 
 interface CategoryChipProps {
   label: string;

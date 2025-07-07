@@ -1,11 +1,11 @@
 import React from 'react';
 
 const navItems = [
-  { label: 'Shop', icon: '/src/assets/bottomnav/home.png', path: '/home' },
-  { label: 'Explore', icon: '/src/assets/bottomnav/explore.png', path: '/explore' },
-  { label: 'Cart', icon: '/src/assets/bottomnav/cart.png', path: '/cart' },
-  { label: 'Favourite', icon: '/src/assets/bottomnav/favorite.png', path: '/favourite' },
-  { label: 'Account', icon: '/src/assets/bottomnav/account.png', path: '/account' },
+  { label: 'Shop', icon: '/src/assets/home.png', path: '/home' },
+  { label: 'Explore', icon: '/src/assets/explore.png', path: '/explore' },
+  { label: 'Cart', icon: '/src/assets/cart.png', path: '/cart' },
+  { label: 'Favourite', icon: '/src/assets/favorite.png', path: '/favourite' },
+  { label: 'Account', icon: '/src/assets/account.png', path: '/account' },
 ];
 
 interface BottomNavProps {

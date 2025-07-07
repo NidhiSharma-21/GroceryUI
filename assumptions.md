@@ -64,4 +64,5 @@
 ## Miscellaneous
 - All spelling, weights, and product names are corrected .
 - Toast notifications appear at the top-right for cart actions.
-- No automated tests or deployment scripts are included. 
+- No automated tests or deployment scripts are included.
+- Cursor AI IDE and AI prompts were used for debugging and solving type errors. This is a recommended practice for future development and maintenance. 
