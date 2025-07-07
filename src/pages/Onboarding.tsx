@@ -29,7 +29,7 @@ const Onboarding = () => {
           Welcome<br />to our store
         </h1>
         <p className="text-lg mt-2 mb-6" style={{ fontFamily: 'Gilroy, sans-serif', color: theme.colors.subtitle }}>
-          Get your groceries in as fast as one minute
+          Get your groceries in as fast as one hour
         </p>
         <Link
           to="/home"
