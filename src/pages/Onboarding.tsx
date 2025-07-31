@@ -12,29 +12,56 @@ const Onboarding = () => {
   }, [clearCart]);
 
   return (
-    <div className="relative h-screen w-full" style={{ fontFamily: 'Gilroy, sans-serif' }}>
+    <div
+      className="relative min-h-screen flex flex-col items-center justify-end overflow-y-auto scrollbar-hide"
+      style={{
+        maxWidth: 375,
+        width: '100vw',
+        minHeight: '100dvh',
+        background: theme.colors.white,
+        fontFamily: 'Gilroy',
+        margin: '0 auto',
+        position: 'relative',
+      }}
+    >
       {/* Background Image */}
       <img
-        className="absolute w-full h-full object-cover"
+        className="absolute w-full h-full object-cover top-0 left-0 z-0"
         src="/assets/onboarding.png"
         alt="Delivery Person"
+        style={{ pointerEvents: 'none', userSelect: 'none' }}
       />
 
-      {/* Overlay content */}
-      <div className="relative z-10 h-full flex flex-col justify-end items-center pb-[5vh] px-4 bg-black/30 text-white text-center">
-        <div className="mb-4 text-4xl">
-          <img src="/assets/carrot.png" alt="carrot" style={{ width: 48, height: 48 }} />
+      {/* Fullscreen Overlay (background only) */}
+      <div
+        className="absolute inset-0 w-full h-full bg-black/30 z-10"
+        style={{ maxWidth: 375, margin: '0 auto', pointerEvents: 'none' }}
+      />
+
+      {/* Bottom Card Content */}
+      <div
+        className="relative z-20 w-full px-8 py-2  text-white text-center rounded-t-3xl flex flex-col items-center"
+       
+      >
+        <div className="mb-4 flex justify-center w-full">
+          <img src="/assets/carrot.png" alt="carrot" style={{ width: 48, height: 48, display: 'block', margin: '0 auto' }} />
         </div>
-        <h1 className="text-[48px] leading-tight font-semibold" style={{ fontFamily: 'Gilroy, sans-serif', fontWeight: 600, color: theme.colors.white }}>
+        <h1
+          className="text-[38px] leading-tight font-semibold mb-2"
+          style={{ fontFamily: 'Gilroy', fontWeight: 600, color: theme.colors.white }}
+        >
           Welcome<br />to our store
         </h1>
-        <p className="text-lg mt-2 mb-6" style={{ fontFamily: 'Gilroy, sans-serif', color: theme.colors.subtitle }}>
+        <p
+          className="text-lg mt-2 mb-5 whitespace-nowrap"
+          style={{ fontFamily: 'Gilroy', color: theme.colors.subtitle }}
+        >
           Get your groceries in as fast as one hour
         </p>
         <Link
           to="/home"
-          className="bg-green-500 max-w-[25em] w-full text-white px-8 py-5 rounded-2xl text-lg font-bold hover:bg-green-600 transition"
-          style={{ fontFamily: 'Gilroy, sans-serif', background: theme.colors.primary, color: theme.colors.white, fontWeight: 700 }}
+          className="bg-green-500 max-w-[20em] w-full text-white px-8 py-5 rounded-2xl text-lg font-bold hover:bg-green-600 transition"
+          style={{ fontFamily: 'Gilroy', background: theme.colors.primary, color: theme.colors.white, fontWeight: 700 }}
         >
           Get Started
         </Link>
